@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Score Calculator</title>
+    <style>
+      /* General Page Styling */
+      /* General Page Styling */
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #d16ba5, #c777b9, #ba8fcc, #aa94e6);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+
+      /* Container */
+      .container {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+      }
+
+      /* Heading */
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      h1 span {
+        color: red;
+      }
+
+      /* Input Fields */
+      .input-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      input {
+        padding: 12px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        font-size: 1rem;
+        width: 45%;
+        text-align: center;
+        outline: none;
+        transition: 0.3s ease;
+      }
+
+      input:focus {
+        border-color: #d16ba5;
+        box-shadow: 0 0 5px rgba(209, 107, 165, 0.7);
+      }
+
+      /* Buttons */
+      button {
+        background-color: #d16ba5;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #c777b9;
+        transform: translateY(-3px);
+      }
+
+      .resetBtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #333;
+      }
+
+      .resetBtn:hover {
+        background-color: #555;
+      }
+
+      /* Output Section */
+      .output {
+        color: #d16ba5;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        animation: fadeIn 0.5s ease-in;
+      }
+
+      /* Fade-in Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="resetBtn">Reset</button>
+      <h1>Love Score Calculator <span>&#10084;</span></h1>
+      <div class="input-container">
+        <input id="name1" placeholder="Enter your name" />
+        <input id="name2" placeholder="Enter your crush's name" />
+      </div>
+      <button class="calculateBtn">Calculate Love Score</button>
+      <div class="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
